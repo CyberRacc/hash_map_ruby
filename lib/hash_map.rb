@@ -27,7 +27,7 @@ class HashMap
   # Handles collisions, possibly by using a linked list at each index
   # Checks the load factor and resizes the bucket if necessary
   # The load order is a ratio of the number of key-value pairs to the bucket size (number of buckets)
-  def set(key, value)
+  def set(key, value) # rubocop:disable Metrics/MethodLength
     index = hash(key)
 
     # `||=` is shorthand for "if the left side is nil, then assign the right side to it"
